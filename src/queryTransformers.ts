@@ -60,7 +60,7 @@ function addTypenameToSelectionSet(
 }
 
 export const addTypenameTransformer: QueryTransformer = (doc: DocumentNode) => {
-  const docClone = cloneDeep(doc);
+  const docClone = doc;
 
   docClone.definitions.forEach((definition: DefinitionNode) => {
     const isRoot = definition.kind === 'OperationDefinition';
